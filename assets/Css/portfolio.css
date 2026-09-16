@@ -265,7 +265,6 @@ hr {
 }
 
 /* ===== CURIOSIDADES ===== */
-
 .curioso-lista {
   color: var(--cor-fundo-escuro);
   font-size: 1.5rem;
@@ -316,6 +315,7 @@ hr {
   position: relative;
 }
 
+
 .titulo-curiosidades {
   font-size: 10rem;
   font-weight: 700;
@@ -323,11 +323,50 @@ hr {
   -webkit-text-stroke: 0.18rem var(--cor-primaria);
   letter-spacing: 0.31rem;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 76px;
+  left: 650px;
   z-index: 1;
   line-height: 1;
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.item {
+    padding: 10px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}   
+
+.carousel {
+    overflow: hidden;
+    max-width: 68%;
+    margin: 20px auto;
+    
+}
+
+@keyframes scroll-right {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.carousel-track {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    animation: scroll-right 20s linear infinite;
+    
+}
+
+
+.carousel .item {
+    width: 200px;
+} 
 
 /* ===== FOTOS ===== */
 .eu-secao {
